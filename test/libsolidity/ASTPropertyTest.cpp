@@ -175,7 +175,7 @@ void ASTPropertyTest::readTestedProperties(Json::Value const& _astJson)
                     auto docNode = node[documentation];
                     testCaseLine = docNode.isObject() ?
                         docNode["text"].asString() :
-                        testCaseLine = docNode.asString();
+                        docNode.asString();
 
                     soltestAssert(!testCaseLine.empty());
                     KeyValueParser parser{testCaseLine};
